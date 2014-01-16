@@ -15,7 +15,9 @@ use Maniaplanet\DedicatedServer\Connection;
 use ManiaLive\Config\Loader;
 use ManiaLive\Event\Dispatcher;
 
-abstract class AbstractApplication extends \ManiaLib\Utils\Singleton
+const VERSION = '4.0.0';
+
+class Application extends \ManiaLib\Utils\Singleton
 {
 	const CYCLES_PER_SECOND = 60;
 
@@ -69,6 +71,8 @@ abstract class AbstractApplication extends \ManiaLib\Utils\Singleton
 
 	protected function init()
 	{
+		\ManiaLive\Utilities\Console::println('Running ManiaLive '.VERSION.'...');
+			
 		new \ManiaLive\Features\Tick\Ticker();
 		$config = \ManiaLive\DedicatedApi\Config::getInstance();
 		$this->connection = Connection::factory(

@@ -71,6 +71,6 @@ gc_enable();
 
 require_once __DIR__.DIRECTORY_SEPARATOR.'libraries'.DIRECTORY_SEPARATOR.'autoload.php';
 
-ManiaLiveApplication\Application::getInstance()->run();
+\ManiaLive\Application::getInstance()->run();
 
 ?>
