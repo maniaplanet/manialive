@@ -9,7 +9,7 @@
 
 namespace ManiaLive\Features;
 
-use DedicatedApi\Connection;
+use Maniaplanet\DedicatedServer\Connection;
 use ManiaLive\DedicatedApi\Callback\Event;
 use ManiaLive\DedicatedApi\Callback\Listener;
 use ManiaLive\DedicatedApi\Config;

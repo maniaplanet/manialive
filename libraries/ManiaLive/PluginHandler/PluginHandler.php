@@ -18,7 +18,7 @@ use ManiaLive\Application\ErrorHandling;
 use ManiaLive\Data\Storage;
 use ManiaLive\DedicatedApi\Callback\Listener as ServerListener;
 use ManiaLive\DedicatedApi\Callback\Event as ServerEvent;
-use DedicatedApi\Structures\Status;
+use Maniaplanet\DedicatedServer\Structures\Status;
 use ManiaLive\Utilities\Console;
 
 /**

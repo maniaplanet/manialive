@@ -27,7 +27,7 @@ use ManiaLive\Threading\Event as ThreadEvent;
 
 use ManiaLive\Data\Storage;
 use ManiaLive\Database\Connection as DbConnection;
-use DedicatedApi\Connection;
+use Maniaplanet\DedicatedServer\Connection;
 use ManiaLive\Features\ChatCommand\Interpreter;
 use ManiaLive\Features\ChatCommand\Command;
 use ManiaLive\Utilities\Console;

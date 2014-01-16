@@ -60,7 +60,7 @@ interface Listener extends \ManiaLive\Event\Listener
 	function onBeginMatch();
 	/**
 	 * Method called when the Race Ended
-	 * struct of SPlayerRanking is a part of the structure of DedicatedApi\Structures\Player object
+	 * struct of SPlayerRanking is a part of the structure of Maniaplanet\DedicatedServer\Structures\Player object
 	 * struct SPlayerRanking
 	 * {
 	 *	string Login;

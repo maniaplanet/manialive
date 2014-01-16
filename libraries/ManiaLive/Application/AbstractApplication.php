@@ -11,7 +11,7 @@
 
 namespace ManiaLive\Application;
 
-use DedicatedApi\Connection;
+use Maniaplanet\DedicatedServer\Connection;
 use ManiaLive\Config\Loader;
 use ManiaLive\Event\Dispatcher;
 
