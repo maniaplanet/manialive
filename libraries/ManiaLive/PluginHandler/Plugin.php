@@ -41,10 +41,6 @@ use ManiaLive\Utilities\Logger;
 abstract class Plugin extends ServerAdapter implements ThreadListener, TickListener, AppListener, PlayerListener, PluginListener
 {
 	/** @var string */
-	private $name;
-	/** @var string */
-	private $author;
-	/** @var string */
 	private $id;
 	/** @var mixed */
 	private $version;
@@ -77,10 +73,7 @@ abstract class Plugin extends ServerAdapter implements ThreadListener, TickListe
 		$this->dependencies = array();
 		$this->methods = array();
 
-		$items = explode('\\', get_class($this));
-		$this->author = $items[1];
-		$this->name = $items[2];
-		$this->id = $this->author.'\\'.$this->name;
+		$this->id = get_class($this);
 		$this->setVersion(1);
 
 		$config = \ManiaLive\DedicatedApi\Config::getInstance();
@@ -111,25 +104,7 @@ abstract class Plugin extends ServerAdapter implements ThreadListener, TickListe
 	}
 
 	/**
-	 * Returns the name of the Plugin.
-	 * @return string
-	 */
-	final public function getName()
-	{
-		return $this->name;
-	}
-
-	/**
-	 * Returns the author of the Plugin.
-	 * @return string
-	 */
-	final public function getAuthor()
-	{
-		return $this->author;
-	}
-
-	/**
-	 * Returns author\name combination for identification.
+	 * Returns full qualified class of plugin
 	 * @return string
 	 */
 	final public function getId()
@@ -470,7 +445,7 @@ abstract class Plugin extends ServerAdapter implements ThreadListener, TickListe
 	 */
 	final protected function writeLog($text)
 	{
-		Logger::debug($text, true, array($this->author.'_'.$this->name));
+		Logger::debug($text, true, array($this->id));
 	}
 
 	/**
@@ -481,7 +456,7 @@ abstract class Plugin extends ServerAdapter implements ThreadListener, TickListe
 	 */
 	final protected function writeConsole($text)
 	{
-		Console::println('['.Console::getDatestamp().'|'.$this->name.'] '.$text);
+		Console::println('['.Console::getDatestamp().'|'.$this->id.'] '.$text);
 	}
 
 	// LISTENERS

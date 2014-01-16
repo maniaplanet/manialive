@@ -98,16 +98,12 @@ final class PluginHandler extends \ManiaLib\Utils\Singleton implements AppListen
 		if(isset($this->loadedPlugins[$pluginId]) || isset($this->delayedPlugins[$pluginId]))
 			throw new Exception('Plugin "'.$pluginId.'" cannot be loaded, maybe there is a naming conflict!');
 		
-		$parts = explode('\\', $pluginId);
-		$className = '\\ManiaLivePlugins\\'.$pluginId.'\\'.end($parts);
-		if(!class_exists($className))
+		if(!class_exists($pluginId))
 		{
-			$className = '\\ManiaLivePlugins\\'.$pluginId.'\\Plugin';
-			if(!class_exists($className))
-				throw new Exception('Plugin "'.$pluginId.'" not found!');
+			throw new Exception('Plugin "'.$pluginId.'" not found!');
 		}
 
-		$plugin = new $className();
+		$plugin = new $pluginId();
 		$plugin->onInit();
 		if(Storage::getInstance()->serverStatus->code > Status::LAUNCHING || $plugin instanceof WaitingCompliant)
 		{
