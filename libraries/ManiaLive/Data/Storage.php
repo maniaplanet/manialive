@@ -109,8 +109,6 @@ class Storage extends \ManiaLib\Utils\Singleton implements ServerListener, AppLi
 		Dispatcher::register(ServerEvent::getClass(), $this, ServerEvent::ALL);
 	}
 
-	#region Implementation de l'applicationListener
-
 	function onInit()
 	{
 		$config = \ManiaLive\DedicatedApi\Config::getInstance();
@@ -187,9 +185,6 @@ class Storage extends \ManiaLib\Utils\Singleton implements ServerListener, AppLi
 	{
 
 	}
-
-	#endRegion
-	#region Implementation of DedicatedApi\Listener
 
 	function onPlayerConnect($login, $isSpectator)
 	{
@@ -585,8 +580,6 @@ class Storage extends \ManiaLib\Utils\Singleton implements ServerListener, AppLi
 		{
 		}
 	}
-
-	#endRegion
 
 	/**
 	 * Give a Player Object for the corresponding login
