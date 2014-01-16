@@ -24,7 +24,7 @@ class EchoHandler extends \ManiaLib\Utils\Singleton implements Listener
 	
 	protected function __construct()
 	{
-		$this->identifier = 'ManiaLive '.\ManiaLiveApplication\Version;
+		$this->identifier = 'ManiaLive '.\ManiaLive\Application\VERSION;
 		$config = Config::getInstance();
 		$this->connection = Connection::factory(
 				$config->host,
@@ -50,7 +50,7 @@ class EchoHandler extends \ManiaLib\Utils\Singleton implements Listener
 					$this->connection->dedicatedEcho($this->identifier, '!census:'.$public);
 					break;
 				case 'stop':
-					\ManiaLiveApplication\Application::getInstance()->kill();
+					\ManiaLive\Application\Application::getInstance()->kill();
 					break;
 			}
 		}

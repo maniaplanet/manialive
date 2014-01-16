@@ -145,9 +145,9 @@ final class PluginHandler extends \ManiaLib\Utils\Singleton implements AppListen
 			// special case, check for core.
 			else if($name == 'ManiaLive')
 			{
-				if($dependency->getMinVersion() != Dependency::NO_LIMIT && version_compare(\ManiaLiveApplication\Version, $dependency->getMinVersion()) < 0)
+				if($dependency->getMinVersion() != Dependency::NO_LIMIT && version_compare(\ManiaLive\Application\VERSION, $dependency->getMinVersion()) < 0)
 					throw new DependencyTooOldException($plugin, $dependency);
-				if($dependency->getMaxVersion() != Dependency::NO_LIMIT && version_compare(\ManiaLiveApplication\Version, $dependency->getMaxVersion()) > 0)
+				if($dependency->getMaxVersion() != Dependency::NO_LIMIT && version_compare(\ManiaLive\Application\VERSION, $dependency->getMaxVersion()) > 0)
 					throw new DependencyTooNewException($plugin, $dependency);
 			}
 
