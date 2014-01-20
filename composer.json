@@ -23,7 +23,9 @@
 	"require": {
         "maniaplanet/maniaplanet-ws-sdk": "~5.0",
         "maniaplanet/manialib": "~3.1",
-        "maniaplanet/dedicated-server-api": "*",
-        "maniaplanet/manialive-plugins": "~4.0"
-    }
+        "maniaplanet/dedicated-server-api": "*"
+    },
+	"suggest": {
+	    "maniaplanet/manialive-plugins": "ManiaLive plugins"
+	}
 }

@@ -3,8 +3,51 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "5db555bf0407485909290352adcbf55a",
+    "hash": "d82ac2fc717ba3603210faecb839831c",
     "packages": [
+        {
+            "name": "maniaplanet/dedicated-server-api",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maniaplanet/dedicated-server-api.git",
+                "reference": "6b2cf9be51c5d1169d7a589d90d85b047af4ce9e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maniaplanet/dedicated-server-api/zipball/6b2cf9be51c5d1169d7a589d90d85b047af4ce9e",
+                "reference": "6b2cf9be51c5d1169d7a589d90d85b047af4ce9e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Maniaplanet\\": "libraries/Maniaplanet"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Nadeo",
+                    "email": "contact@nadeo.com",
+                    "homepage": "http://www.nadeo.com/"
+                }
+            ],
+            "description": "XML-RPC library to connect to ManiaPlanet server",
+            "homepage": "https://github.com/maniaplanet/dedicated-server-api",
+            "keywords": [
+                "ManiaPlanet",
+                "ShootMania",
+                "TrackMania"
+            ],
+            "time": "2014-01-20 08:30:27"
+        },
         {
             "name": "maniaplanet/manialib",
             "version": "3.1.1",
@@ -50,16 +93,16 @@
         },
         {
             "name": "maniaplanet/maniaplanet-ws-sdk",
-            "version": "5.0.1",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maniaplanet/maniaplanet-ws-sdk.git",
-                "reference": "4be031223012561538d40644689760fba02e2daa"
+                "reference": "c0b2fdd67bee4a9901213a8b62845adb8550284b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maniaplanet/maniaplanet-ws-sdk/zipball/4be031223012561538d40644689760fba02e2daa",
-                "reference": "4be031223012561538d40644689760fba02e2daa",
+                "url": "https://api.github.com/repos/maniaplanet/maniaplanet-ws-sdk/zipball/c0b2fdd67bee4a9901213a8b62845adb8550284b",
+                "reference": "c0b2fdd67bee4a9901213a8b62845adb8550284b",
                 "shasum": ""
             },
             "require": {
@@ -70,7 +113,7 @@
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Maniaplanet\\": "libraries/Maniaplanet/"
+                    "Maniaplanet\\": "libraries/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -95,7 +138,7 @@
                 "rest",
                 "web services"
             ],
-            "time": "2014-01-14 15:29:22"
+            "time": "2014-01-15 12:41:05"
         }
     ],
     "packages-dev": [
