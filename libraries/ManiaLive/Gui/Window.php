@@ -25,7 +25,7 @@ abstract class Window extends Container implements TickListener
 	const Z_MAXIMIZED = 0;
 	const Z_MODAL = 25;
 	const Z_MAX = 50;
-	const Z_OFFSET = .1;
+	const Z_OFFSET = .00001;
 
 	const LAYER_NORMAL = 'normal';
 	const LAYER_SCORES_TABLE = 'scorestable';
