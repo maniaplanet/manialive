@@ -16,3 +16,17 @@ Requirements
   * PHP 5.3.1 or newer, [CLI](http://php.net/manual/en/features.commandline.php)
   * [cURL extension](http://php.net/manual/en/book.curl.php)
   * (optional) [SQLlite extension](http://fr.php.net/manual/en/book.sqlite.php) in order to use the multi-threading feature
+
+Installation
+------------
+
+An executable file will be distributed with the release of the version 4.0. For now follow the developers version.
+
+Developers
+-----------
+
+In order have a working version, you need to have [Composer](https://getcomposer.org/). 
+
+* Clone our repository: `$ git clone git@github.com:maniaplanet/manialive.git`
+* Go in `manialive` directory: `$ cd manialive`
+* Run composer to update the dependencies: `$ composer install`
