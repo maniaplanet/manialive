@@ -22,8 +22,6 @@ use ManiaLive\Features\Tick\Listener as TickListener;
 use ManiaLive\Features\Tick\Event as TickEvent;
 use ManiaLive\PluginHandler\Listener as PluginListener;
 use ManiaLive\PluginHandler\Event as PluginEvent;
-use ManiaLive\Threading\Listener as ThreadListener;
-use ManiaLive\Threading\Event as ThreadEvent;
 
 use ManiaLive\Data\Storage;
 use ManiaLive\Database\Connection as DbConnection;
@@ -50,7 +48,6 @@ abstract class Plugin extends ServerAdapter implements ThreadListener, TickListe
 	 * Event subscriber swichtes
 	 */
 	private $eventsApplication = 0;
-	private $eventsThreading = 0;
 	private $eventsTick = false;
 	private $eventsServer = 0;
 	private $eventsStorage = 0;
@@ -357,29 +354,6 @@ abstract class Plugin extends ServerAdapter implements ThreadListener, TickListe
 
 		Dispatcher::unregister(PlayerEvent::getClass(), $this, $events & $this->eventsStorage);
 		$this->eventsStorage &= ~$events;
-	}
-
-	/**
-	 * Starts listening for threading events like:
-	 * onThreadStart, onThreadRestart, onThreadDies, onThreadTimeOut
-	 */
-	final protected function enableThreadingEvents($events = ThreadEvent::ALL)
-	{
-		$this->restrictIfUnloaded();
-
-		Dispatcher::register(ThreadEvent::getClass(), $this, $events & ~$this->eventsThreading);
-		$this->eventsThreading |= $events;
-	}
-
-	/**
-	 * Stop listening for threading events.
-	 */
-	final protected function disableThreadingEvents($events = ThreadEvent::ALL)
-	{
-		$this->restrictIfUnloaded();
-
-		Dispatcher::unregister(ThreadEvent::getClass(), $this, $events & $this->eventsThreading);
-		$this->eventsThreading &= ~$events;
 	}
 
 	/**

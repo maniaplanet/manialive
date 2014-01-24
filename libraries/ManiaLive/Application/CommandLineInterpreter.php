@@ -21,8 +21,6 @@ abstract class CommandLineInterpreter
 		));
 
 		$help = 'ManiaLive '."\n"
-		.'Authors : '."\n"
-		.'	Philippe "farfa" Melot, Maxime "Gouxim" Raoust, Florian "aseco" Schnell, Gwendal "Newbo.O" Martin'.PHP_EOL
 		.'Usage: php bootstrapper.php [args]'.PHP_EOL
 		.'Arguments:'."\n"
 		.'  --help               - displays the present help'.PHP_EOL
@@ -30,6 +28,7 @@ abstract class CommandLineInterpreter
 		.'  --address=xxx        - xxx represents the address of the server, it should be an IP address or localhost'.PHP_EOL
 		.'  --user=xxx           - xxx represents the name of the user to use for the communication. It should be User, Admin or SuperAdmin'.PHP_EOL
 		.'  --password=xxx       - xxx represents the password relative to --user Argument'.PHP_EOL
+		.'  --manialive_cfg=xxx  - xxx represents the config file for manialive in config/ folder'.PHP_EOL
 		.'  --dedicated_cfg=xxx  - xxx represents the name of the Dedicated configuration file to use to get the connection data. This file should be present in the Dedicated\'s config file.'.PHP_EOL
 		.'  --logsPrefix=xxx     - xxx reprents the prefix used for this instance log.'.PHP_EOL
 		.'  --debug              - activate debug log.'.PHP_EOL;

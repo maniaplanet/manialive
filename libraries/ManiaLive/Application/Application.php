@@ -43,8 +43,8 @@ class Application extends \ManiaLib\Utils\Singleton
 
 			// load configuration file
 			$loader = Loader::getInstance();
-			$loader->setConfigFilename(APP_ROOT.'config'.DIRECTORY_SEPARATOR.$configFile);
-			$loader->run();
+			$loader->setINIConfigFilename(APP_ROOT.'config'.DIRECTORY_SEPARATOR.$configFile);
+			$loader->load();
 
 			// load configureation from the command line ...
 			CommandLineInterpreter::postConfigLoad();
@@ -88,7 +88,6 @@ class Application extends \ManiaLib\Utils\Singleton
 		\ManiaLive\Features\EchoHandler::getInstance();
 		\ManiaLive\Gui\GuiHandler::getInstance();
 		\ManiaLive\PluginHandler\PluginHandler::getInstance();
-		\ManiaLive\Threading\ThreadHandler::getInstance();
 
 		Dispatcher::dispatch(new Event(Event::ON_INIT));
 	}
