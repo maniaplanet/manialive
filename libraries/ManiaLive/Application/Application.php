@@ -88,7 +88,6 @@ class Application extends \ManiaLib\Utils\Singleton
 		\ManiaLive\Features\EchoHandler::getInstance();
 		\ManiaLive\Gui\GuiHandler::getInstance();
 		\ManiaLive\PluginHandler\PluginHandler::getInstance();
-		\ManiaLive\Threading\ThreadHandler::getInstance();
 
 		Dispatcher::dispatch(new Event(Event::ON_INIT));
 	}
