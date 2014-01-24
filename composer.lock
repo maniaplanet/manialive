@@ -97,18 +97,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/maniaplanet/manialive-plugins.git",
-                "reference": "10b4e55e942f42094dcf65034849690de0efca48"
+                "reference": "a617d297ee6d5b420c3bcddb6275a9c51c43c61f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maniaplanet/manialive-plugins/zipball/10b4e55e942f42094dcf65034849690de0efca48",
-                "reference": "10b4e55e942f42094dcf65034849690de0efca48",
+                "url": "https://api.github.com/repos/maniaplanet/manialive-plugins/zipball/a617d297ee6d5b420c3bcddb6275a9c51c43c61f",
+                "reference": "a617d297ee6d5b420c3bcddb6275a9c51c43c61f",
                 "shasum": ""
             },
             "require": {
                 "maniaplanet/manialive": "dev-master"
             },
             "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ManiaLivePlugins\\": "/"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "LGPL-3.0"
@@ -130,7 +135,7 @@
                 "application",
                 "xml-rpc"
             ],
-            "time": "2014-01-24 09:57:21"
+            "time": "2014-01-24 13:01:18"
         },
         {
             "name": "maniaplanet/maniaplanet-ws-sdk",
