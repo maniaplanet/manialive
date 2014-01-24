@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "d82ac2fc717ba3603210faecb839831c",
+    "hash": "5231c14147fdc9f6ae76002a8190313e",
     "packages": [
         {
             "name": "maniaplanet/dedicated-server-api",
-            "version": "4.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maniaplanet/dedicated-server-api.git",
-                "reference": "6b2cf9be51c5d1169d7a589d90d85b047af4ce9e"
+                "reference": "96d2094aca3fdc7f381aa85bb906ad3a8a06dbcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maniaplanet/dedicated-server-api/zipball/6b2cf9be51c5d1169d7a589d90d85b047af4ce9e",
-                "reference": "6b2cf9be51c5d1169d7a589d90d85b047af4ce9e",
+                "url": "https://api.github.com/repos/maniaplanet/dedicated-server-api/zipball/96d2094aca3fdc7f381aa85bb906ad3a8a06dbcc",
+                "reference": "96d2094aca3fdc7f381aa85bb906ad3a8a06dbcc",
                 "shasum": ""
             },
             "require": {
@@ -34,8 +34,8 @@
             ],
             "authors": [
                 {
-                    "name": "Nadeo",
-                    "email": "contact@nadeo.com",
+                    "name": "NadeoLive",
+                    "email": "livedev@nadeo.com",
                     "homepage": "http://www.nadeo.com/"
                 }
             ],
@@ -46,20 +46,20 @@
                 "ShootMania",
                 "TrackMania"
             ],
-            "time": "2014-01-20 08:30:27"
+            "time": "2014-01-23 16:04:32"
         },
         {
             "name": "maniaplanet/manialib",
-            "version": "3.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maniaplanet/manialib.git",
-                "reference": "f6793944f9ad4b348bae491efc4d69ff815f0bd2"
+                "reference": "cb551f7354f9387738de8b3ce185fdde7d6d12c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maniaplanet/manialib/zipball/f6793944f9ad4b348bae491efc4d69ff815f0bd2",
-                "reference": "f6793944f9ad4b348bae491efc4d69ff815f0bd2",
+                "url": "https://api.github.com/repos/maniaplanet/manialib/zipball/cb551f7354f9387738de8b3ce185fdde7d6d12c2",
+                "reference": "cb551f7354f9387738de8b3ce185fdde7d6d12c2",
                 "shasum": ""
             },
             "require": {
@@ -77,8 +77,8 @@
             ],
             "authors": [
                 {
-                    "name": "Nadeo",
-                    "email": "contact@nadeo.com",
+                    "name": "NadeoLive",
+                    "email": "livedev@nadeo.com",
                     "homepage": "http://www.nadeo.com/"
                 }
             ],
@@ -89,20 +89,61 @@
                 "ShootMania",
                 "TrackMania"
             ],
-            "time": "2014-01-14 15:28:42"
+            "time": "2014-01-23 16:04:48"
         },
         {
-            "name": "maniaplanet/maniaplanet-ws-sdk",
-            "version": "5.0.2",
+            "name": "maniaplanet/manialive-plugins",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/maniaplanet/maniaplanet-ws-sdk.git",
-                "reference": "c0b2fdd67bee4a9901213a8b62845adb8550284b"
+                "url": "https://github.com/maniaplanet/manialive-plugins.git",
+                "reference": "10b4e55e942f42094dcf65034849690de0efca48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maniaplanet/maniaplanet-ws-sdk/zipball/c0b2fdd67bee4a9901213a8b62845adb8550284b",
-                "reference": "c0b2fdd67bee4a9901213a8b62845adb8550284b",
+                "url": "https://api.github.com/repos/maniaplanet/manialive-plugins/zipball/10b4e55e942f42094dcf65034849690de0efca48",
+                "reference": "10b4e55e942f42094dcf65034849690de0efca48",
+                "shasum": ""
+            },
+            "require": {
+                "maniaplanet/manialive": "dev-master"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "NadeoLive",
+                    "email": "livedev@nadeo.com",
+                    "homepage": "http://www.nadeo.com/"
+                }
+            ],
+            "description": "ManiaLive plugins",
+            "homepage": "https://github.com/maniaplanet/manialive-plugins",
+            "keywords": [
+                "ManiaPlanet",
+                "ShootMania",
+                "Socket",
+                "TrackMania",
+                "application",
+                "xml-rpc"
+            ],
+            "time": "2014-01-24 09:57:21"
+        },
+        {
+            "name": "maniaplanet/maniaplanet-ws-sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maniaplanet/maniaplanet-ws-sdk.git",
+                "reference": "a76d4eea4c2549f07e2f2c07d3eeaf7d9eff0ac4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maniaplanet/maniaplanet-ws-sdk/zipball/a76d4eea4c2549f07e2f2c07d3eeaf7d9eff0ac4",
+                "reference": "a76d4eea4c2549f07e2f2c07d3eeaf7d9eff0ac4",
                 "shasum": ""
             },
             "require": {
@@ -112,8 +153,8 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Maniaplanet\\": "libraries/"
+                "psr-4": {
+                    "Maniaplanet\\": "libraries/Maniaplanet"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -138,7 +179,7 @@
                 "rest",
                 "web services"
             ],
-            "time": "2014-01-15 12:41:05"
+            "time": "2014-01-20 11:18:16"
         }
     ],
     "packages-dev": [
@@ -148,9 +189,12 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "maniaplanet/maniaplanet-ws-sdk": 20,
+        "maniaplanet/manialib": 20,
+        "maniaplanet/dedicated-server-api": 20,
+        "maniaplanet/manialive-plugins": 20
+    },
     "platform": [
 
     ],
