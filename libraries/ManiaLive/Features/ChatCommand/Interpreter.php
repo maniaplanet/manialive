@@ -14,7 +14,7 @@ namespace ManiaLive\Features\ChatCommand;
 use ManiaLive\Event\Dispatcher;
 use ManiaLive\DedicatedApi\Callback\Listener as ServerListener;
 use ManiaLive\DedicatedApi\Callback\Event as ServerEvent;
-use DedicatedApi\Connection;
+use Maniaplanet\DedicatedServer\Connection;
 use ManiaLive\Utilities\Logger;
 
 final class Interpreter extends \ManiaLib\Utils\Singleton implements ServerListener

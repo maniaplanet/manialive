@@ -17,11 +17,11 @@ use ManiaLive\Application\Listener as AppListener;
 use ManiaLive\Application\Event as AppEvent;
 use ManiaLive\DedicatedApi\Callback\Listener as ServerListener;
 use ManiaLive\DedicatedApi\Callback\Event as ServerEvent;
-use DedicatedApi\Connection;
-use DedicatedApi\Structures\GameInfos;
-use DedicatedApi\Structures\Map;
-use DedicatedApi\Structures\Player;
-use DedicatedApi\Structures\Vote;
+use Maniaplanet\DedicatedServer\Connection;
+use Maniaplanet\DedicatedServer\Structures\GameInfos;
+use Maniaplanet\DedicatedServer\Structures\Map;
+use Maniaplanet\DedicatedServer\Structures\Player;
+use Maniaplanet\DedicatedServer\Structures\Vote;
 use ManiaLive\Utilities\Console;
 
 /**
@@ -32,7 +32,7 @@ class Storage extends \ManiaLib\Utils\Singleton implements ServerListener, AppLi
 
 	/**
 	 *
-	 * @var \DedicatedApi\Connection
+	 * @var \Maniaplanet\DedicatedServer\Connection
 	 */
 	private $connection;
 	private $disconnectedPlayers = array();
@@ -44,49 +44,49 @@ class Storage extends \ManiaLib\Utils\Singleton implements ServerListener, AppLi
 
 	/**
 	 * Contains Player object. It represents the player connected to the server
-	 * @var \DedicatedApi\Structures\Player[]
+	 * @var \Maniaplanet\DedicatedServer\Structures\Player[]
 	 */
 	public $players = array();
 
 	/**
 	 * Contains Player object. It represents the spectators connected to the server
-	 * @var \DedicatedApi\Structures\Player[]
+	 * @var \Maniaplanet\DedicatedServer\Structures\Player[]
 	 */
 	public $spectators = array();
 
 	/**
 	 * Contains Map objects. It represents the current maps available on the server
-	 * @var \DedicatedApi\Structures\Map[]
+	 * @var \Maniaplanet\DedicatedServer\Structures\Map[]
 	 */
 	public $maps;
 
 	/**
 	 * Represents the current Map object
-	 * @var \DedicatedApi\Structures\Map
+	 * @var \Maniaplanet\DedicatedServer\Structures\Map
 	 */
 	public $currentMap;
 
 	/**
 	 * Represents the next Map object
-	 * @var \DedicatedApi\Structures\Map
+	 * @var \Maniaplanet\DedicatedServer\Structures\Map
 	 */
 	public $nextMap;
 
 	/**
 	 * Represents the Current Server Options
-	 * @var \DedicatedApi\Structures\ServerOptions
+	 * @var \Maniaplanet\DedicatedServer\Structures\ServerOptions
 	 */
 	public $server;
 
 	/**
 	 * Represents the Current Game Infos
-	 * @var \DedicatedApi\Structures\GameInfos
+	 * @var \Maniaplanet\DedicatedServer\Structures\GameInfos
 	 */
 	public $gameInfos;
 
 	/**
 	 * Represents the current Server Status
-	 * @var \DedicatedApi\Structures\Status
+	 * @var \Maniaplanet\DedicatedServer\Structures\Status
 	 */
 	public $serverStatus;
 
@@ -108,8 +108,6 @@ class Storage extends \ManiaLib\Utils\Singleton implements ServerListener, AppLi
 		Dispatcher::register(AppEvent::getClass(), $this, AppEvent::ON_INIT | AppEvent::ON_POST_LOOP);
 		Dispatcher::register(ServerEvent::getClass(), $this, ServerEvent::ALL);
 	}
-
-	#region Implementation de l'applicationListener
 
 	function onInit()
 	{
@@ -187,9 +185,6 @@ class Storage extends \ManiaLib\Utils\Singleton implements ServerListener, AppLi
 	{
 
 	}
-
-	#endRegion
-	#region Implementation of DedicatedApi\Listener
 
 	function onPlayerConnect($login, $isSpectator)
 	{
@@ -586,12 +581,10 @@ class Storage extends \ManiaLib\Utils\Singleton implements ServerListener, AppLi
 		}
 	}
 
-	#endRegion
-
 	/**
 	 * Give a Player Object for the corresponding login
 	 * @param string $login
-	 * @return \DedicatedApi\Structures\Player
+	 * @return \Maniaplanet\DedicatedServer\Structures\Player
 	 */
 	function getPlayerObject($login)
 	{

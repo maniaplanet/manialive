@@ -18,7 +18,7 @@ use ManiaLive\Application\ErrorHandling;
 use ManiaLive\Data\Storage;
 use ManiaLive\DedicatedApi\Callback\Listener as ServerListener;
 use ManiaLive\DedicatedApi\Callback\Event as ServerEvent;
-use DedicatedApi\Structures\Status;
+use Maniaplanet\DedicatedServer\Structures\Status;
 use ManiaLive\Utilities\Console;
 
 /**
@@ -98,16 +98,12 @@ final class PluginHandler extends \ManiaLib\Utils\Singleton implements AppListen
 		if(isset($this->loadedPlugins[$pluginId]) || isset($this->delayedPlugins[$pluginId]))
 			throw new Exception('Plugin "'.$pluginId.'" cannot be loaded, maybe there is a naming conflict!');
 		
-		$parts = explode('\\', $pluginId);
-		$className = '\\ManiaLivePlugins\\'.$pluginId.'\\'.end($parts);
-		if(!class_exists($className))
+		if(!class_exists($pluginId))
 		{
-			$className = '\\ManiaLivePlugins\\'.$pluginId.'\\Plugin';
-			if(!class_exists($className))
-				throw new Exception('Plugin "'.$pluginId.'" not found!');
+			throw new Exception('Plugin "'.$pluginId.'" not found!');
 		}
 
-		$plugin = new $className();
+		$plugin = new $pluginId();
 		$plugin->onInit();
 		if(Storage::getInstance()->serverStatus->code > Status::LAUNCHING || $plugin instanceof WaitingCompliant)
 		{
@@ -145,9 +141,9 @@ final class PluginHandler extends \ManiaLib\Utils\Singleton implements AppListen
 			// special case, check for core.
 			else if($name == 'ManiaLive')
 			{
-				if($dependency->getMinVersion() != Dependency::NO_LIMIT && version_compare(\ManiaLiveApplication\Version, $dependency->getMinVersion()) < 0)
+				if($dependency->getMinVersion() != Dependency::NO_LIMIT && version_compare(\ManiaLive\Application\VERSION, $dependency->getMinVersion()) < 0)
 					throw new DependencyTooOldException($plugin, $dependency);
-				if($dependency->getMaxVersion() != Dependency::NO_LIMIT && version_compare(\ManiaLiveApplication\Version, $dependency->getMaxVersion()) > 0)
+				if($dependency->getMaxVersion() != Dependency::NO_LIMIT && version_compare(\ManiaLive\Application\VERSION, $dependency->getMaxVersion()) > 0)
 					throw new DependencyTooNewException($plugin, $dependency);
 			}
 
