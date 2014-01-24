@@ -26,7 +26,7 @@ class Loader extends \ManiaLib\Application\ConfigLoader
 		
 		$this->aliases = array_merge($this->aliases, $manialiveAliases);
 		
-		parent::load();
+		parent::run();
 	}
 }
 
