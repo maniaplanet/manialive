@@ -13,7 +13,7 @@ namespace ManiaLive\Config;
 
 class Loader extends \ManiaLib\Application\ConfigLoader
 {
-	function load()
+	function run()
 	{
 		$manialiveAliases = array(
 			'config' => 'ManiaLive\\Config\\Config',
