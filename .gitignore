@@ -1,3 +1,6 @@
-/vendor
-/nbproject
-/config/config.ini
+vendor
+nbproject
+libraries/ManiaLivePlugins
+
+config/*
+!config/config-example.ini
