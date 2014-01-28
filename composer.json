@@ -1,6 +1,6 @@
 {
     "name": "maniaplanet/manialive",
-    "type": "library",
+    "type": "project",
     "description": "ManiaPlanet dedicated server controller",
     "keywords": ["maniaplanet", "shootmania", "trackmania", "application", "xml-rpc", "socket"],
     "homepage": "https://github.com/maniaplanet/manialive",

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "5231c14147fdc9f6ae76002a8190313e",
+    "hash": "22ec537f46d3c0f98d180d073bbcaf60",
     "packages": [
         {
             "name": "maniaplanet/dedicated-server-api",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/maniaplanet/dedicated-server-api.git",
-                "reference": "96d2094aca3fdc7f381aa85bb906ad3a8a06dbcc"
+                "reference": "7a5bcdab09a9ffb09396f44da63a12ab7a0321aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maniaplanet/dedicated-server-api/zipball/96d2094aca3fdc7f381aa85bb906ad3a8a06dbcc",
-                "reference": "96d2094aca3fdc7f381aa85bb906ad3a8a06dbcc",
+                "url": "https://api.github.com/repos/maniaplanet/dedicated-server-api/zipball/7a5bcdab09a9ffb09396f44da63a12ab7a0321aa",
+                "reference": "7a5bcdab09a9ffb09396f44da63a12ab7a0321aa",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "ShootMania",
                 "TrackMania"
             ],
-            "time": "2014-01-23 16:04:32"
+            "time": "2014-01-24 15:04:12"
         },
         {
             "name": "maniaplanet/manialib",
@@ -54,12 +54,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/maniaplanet/manialib.git",
-                "reference": "cb551f7354f9387738de8b3ce185fdde7d6d12c2"
+                "reference": "21c767379f0f5e7a701878d035223433cd28af8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maniaplanet/manialib/zipball/cb551f7354f9387738de8b3ce185fdde7d6d12c2",
-                "reference": "cb551f7354f9387738de8b3ce185fdde7d6d12c2",
+                "url": "https://api.github.com/repos/maniaplanet/manialib/zipball/21c767379f0f5e7a701878d035223433cd28af8c",
+                "reference": "21c767379f0f5e7a701878d035223433cd28af8c",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 "ShootMania",
                 "TrackMania"
             ],
-            "time": "2014-01-23 16:04:48"
+            "time": "2014-01-24 15:02:05"
         },
         {
             "name": "maniaplanet/manialive-plugins",
@@ -143,12 +143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/maniaplanet/maniaplanet-ws-sdk.git",
-                "reference": "a76d4eea4c2549f07e2f2c07d3eeaf7d9eff0ac4"
+                "reference": "2f1bbef19c60dc2438512d36d30add09c7064f25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maniaplanet/maniaplanet-ws-sdk/zipball/a76d4eea4c2549f07e2f2c07d3eeaf7d9eff0ac4",
-                "reference": "a76d4eea4c2549f07e2f2c07d3eeaf7d9eff0ac4",
+                "url": "https://api.github.com/repos/maniaplanet/maniaplanet-ws-sdk/zipball/2f1bbef19c60dc2438512d36d30add09c7064f25",
+                "reference": "2f1bbef19c60dc2438512d36d30add09c7064f25",
                 "shasum": ""
             },
             "require": {
@@ -184,7 +184,7 @@
                 "rest",
                 "web services"
             ],
-            "time": "2014-01-20 11:18:16"
+            "time": "2014-01-24 15:01:07"
         }
     ],
     "packages-dev": [
