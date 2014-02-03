@@ -19,12 +19,8 @@
         "php": ">=5.3",
         "ext-curl": "*",
         "ext-json": "*",
-        "maniaplanet/maniaplanet-ws-sdk": "dev-master",
-        "maniaplanet/manialib": "dev-master",
-        "maniaplanet/dedicated-server-api": "dev-master"
-    },
-    "suggest": {
-        "maniaplanet/manialive-plugins": "dev-master",
+        "maniaplanet/manialive-lib": "dev-master",
+		"maniaplanet/manialive-plugins": "dev-master",
         "maniaplanet/matchmaking-lobby": "dev-master"
     },
     "minimum-stability": "dev"

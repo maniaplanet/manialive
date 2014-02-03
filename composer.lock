@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "f246a827c4ee4f0f9f03824b99564d67",
+    "hash": "c3a4640004f879238b2d8a5117cdde68",
     "packages": [
         {
             "name": "maniaplanet/dedicated-server-api",
@@ -92,6 +92,96 @@
             "time": "2014-01-27 10:39:31"
         },
         {
+            "name": "maniaplanet/manialive-lib",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maniaplanet/manialive-lib.git",
+                "reference": "80a6e0bb3c7f7780c3ccce2bd4a20a7622487cc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maniaplanet/manialive-lib/zipball/80a6e0bb3c7f7780c3ccce2bd4a20a7622487cc2",
+                "reference": "80a6e0bb3c7f7780c3ccce2bd4a20a7622487cc2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "maniaplanet/dedicated-server-api": "dev-master",
+                "maniaplanet/manialib": "dev-master",
+                "maniaplanet/maniaplanet-ws-sdk": "dev-master",
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "NadeoLive",
+                    "email": "livedev@nadeo.com",
+                    "homepage": "http://www.nadeo.com/"
+                }
+            ],
+            "description": "ManiaLive library",
+            "homepage": "https://github.com/maniaplanet/manialive-lib",
+            "keywords": [
+                "ManiaPlanet",
+                "ShootMania",
+                "Socket",
+                "TrackMania",
+                "application",
+                "xml-rpc"
+            ],
+            "time": "2014-02-03 10:20:53"
+        },
+        {
+            "name": "maniaplanet/manialive-plugins",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maniaplanet/manialive-plugins.git",
+                "reference": "db79c56e8f073a221c2bbd4719776bc66a963499"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maniaplanet/manialive-plugins/zipball/db79c56e8f073a221c2bbd4719776bc66a963499",
+                "reference": "db79c56e8f073a221c2bbd4719776bc66a963499",
+                "shasum": ""
+            },
+            "require": {
+                "maniaplanet/manialive": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ManiaLivePlugins\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "NadeoLive",
+                    "email": "livedev@nadeo.com",
+                    "homepage": "http://www.nadeo.com/"
+                }
+            ],
+            "description": "ManiaLive plugins",
+            "homepage": "https://github.com/maniaplanet/manialive-plugins",
+            "keywords": [
+                "ManiaPlanet",
+                "ShootMania",
+                "TrackMania",
+                "manialive"
+            ],
+            "time": "2014-01-28 09:19:01"
+        },
+        {
             "name": "maniaplanet/maniaplanet-ws-sdk",
             "version": "dev-master",
             "source": {
@@ -139,6 +229,50 @@
                 "web services"
             ],
             "time": "2014-01-24 15:01:07"
+        },
+        {
+            "name": "maniaplanet/matchmaking-lobby",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maniaplanet/matchmaking-lobby.git",
+                "reference": "438e5d41f4f9b1cd11c0a3bbe14295aa9a6e371c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maniaplanet/matchmaking-lobby/zipball/438e5d41f4f9b1cd11c0a3bbe14295aa9a6e371c",
+                "reference": "438e5d41f4f9b1cd11c0a3bbe14295aa9a6e371c",
+                "shasum": ""
+            },
+            "require": {
+                "maniaplanet/manialive": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ManiaLivePlugins\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "NadeoLive",
+                    "email": "livedev@nadeo.com",
+                    "homepage": "http://www.nadeo.com/"
+                }
+            ],
+            "description": "ManiaLive matchmaking lobby plugin",
+            "homepage": "https://github.com/maniaplanet/matchmaking-lobby",
+            "keywords": [
+                "ManiaPlanet",
+                "ShootMania",
+                "TrackMania",
+                "manialive"
+            ],
+            "time": "2014-02-03 08:37:42"
         }
     ],
     "packages-dev": [
@@ -149,13 +283,15 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "maniaplanet/maniaplanet-ws-sdk": 20,
-        "maniaplanet/manialib": 20,
-        "maniaplanet/dedicated-server-api": 20
+        "maniaplanet/manialive-lib": 20,
+        "maniaplanet/manialive-plugins": 20,
+        "maniaplanet/matchmaking-lobby": 20
     },
-    "platform": [
-
-    ],
+    "platform": {
+        "php": ">=5.3",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
     "platform-dev": [
 
     ]
