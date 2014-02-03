@@ -18,9 +18,7 @@
     "require": {
         "php": ">=5.3",
         "ext-curl": "*",
-        "ext-json": "*"
-    },
-    "require": {
+        "ext-json": "*",
         "maniaplanet/maniaplanet-ws-sdk": "dev-master",
         "maniaplanet/manialib": "dev-master",
         "maniaplanet/dedicated-server-api": "dev-master"
