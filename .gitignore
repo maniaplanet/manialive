@@ -4,3 +4,4 @@ libraries/ManiaLivePlugins
 
 config/*
 !config/config-example.ini
+manialive.phar

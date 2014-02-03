@@ -8,6 +8,7 @@
  * @author      $Author$:
  * @date        $Date$:
  */
+require_once __DIR__.DIRECTORY_SEPARATOR.'libraries'.DIRECTORY_SEPARATOR.'autoload.php';
 
 $phpOk = (function_exists('version_compare') && version_compare(phpversion(), '5.3.1', '>='));
 $jsonOk = (extension_loaded('json') && function_exists('json_encode') && function_exists('json_decode'));
@@ -68,8 +69,6 @@ if(!$mysqlOk)
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 gc_enable();
-
-require_once __DIR__.DIRECTORY_SEPARATOR.'libraries'.DIRECTORY_SEPARATOR.'autoload.php';
 
 \ManiaLive\Application\Application::getInstance()->run();
 

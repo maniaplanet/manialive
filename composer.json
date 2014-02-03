@@ -21,7 +21,11 @@
         "ext-json": "*",
         "maniaplanet/manialive-lib": "dev-master",
 		"maniaplanet/manialive-plugins": "dev-master",
-        "maniaplanet/matchmaking-lobby": "dev-master"
+        "maniaplanet/matchmaking-lobby": "dev-master",
+		"maniaplanet/manialive-plugins": "dev-master"
+    },
+    "require-dev": {
+        "phine/phar": "~1.0"
     },
     "minimum-stability": "dev"
 }
