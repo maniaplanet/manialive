@@ -17,7 +17,7 @@ class ManiaLiveIterator extends RecursiveFilterIterator
 	}
 }
 
-$iterator = new RecursiveIteratorIterator(new ManiaLiveIterator(new RecursiveDirectoryIterator(__DIR__)), RecursiveIteratorIterator::LEAVES_ONLY );
+$iterator = new RecursiveIteratorIterator(new ManiaLiveIterator(new RecursiveDirectoryIterator(__DIR__), RecursiveDirectoryIterator::SKIP_DOTS), RecursiveIteratorIterator::LEAVES_ONLY );
 
 $builder->buildFromIterator($iterator, __DIR__);
 
