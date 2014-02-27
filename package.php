@@ -12,8 +12,9 @@ class ManiaLiveIterator extends RecursiveFilterIterator
 {
 	public function accept()
 	{
+		$excludeFiles = array('.git', 'config.ini');
 		$path = explode(DIRECTORY_SEPARATOR, $this->current()->getPath());
-		return !in_array('.git', $path, true) && $this->current()->getFilename() != '.git';
+		return !in_array('.git', $path, true) && !in_array($this->current()->getFilename(), $excludeFiles) ;
 	}
 }
 
