@@ -8,7 +8,6 @@
  * @author      $Author$:
  * @date        $Date$:
  */
-
 define('APP_ROOT', __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR);
 
 if(!defined('MANIALIB_APP_PATH'))
@@ -16,20 +15,28 @@ if(!defined('MANIALIB_APP_PATH'))
 	define('MANIALIB_APP_PATH', __DIR__.'/../');
 }
 
+// Deprecated autoloader
 spl_autoload_register(
-		function ($className)
-		{
-			$className = str_replace('\\', DIRECTORY_SEPARATOR, $className);
-			$path = APP_ROOT.'libraries'.DIRECTORY_SEPARATOR.$className.'.php';
-			if(file_exists($path))
-				require_once $path;
-		}
+	function ($className)
+	{
+	$className = str_replace('\\', DIRECTORY_SEPARATOR, $className);
+	$path = APP_ROOT.'libraries'.DIRECTORY_SEPARATOR.$className.'.php';
+	if(file_exists($path)) require_once $path;
+	}
 );
 
 $composerAutoloaderFile = __DIR__.'/../vendor/autoload.php';
 
-if (file_exists($composerAutoloaderFile))
-	require $composerAutoloaderFile;
+if(file_exists($composerAutoloaderFile)) require $composerAutoloaderFile;
 
 
+// Autoload plugins/ dir (prepend)
+spl_autoload_register(
+	function ($className)
+	{
+	$className = str_replace('\\', DIRECTORY_SEPARATOR, $className);
+	$path = (\Phar::running(false) != "" ? dirname(\Phar::running(false)) : APP_ROOT).DIRECTORY_SEPARATOR.'plugins'.DIRECTORY_SEPARATOR.$className.'.php';
+	if(file_exists($path)) require_once $path;
+	}
+	, true, true);
 ?>
